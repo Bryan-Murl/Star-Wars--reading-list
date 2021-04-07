@@ -1,7 +1,10 @@
 .horizontal-scrollable{
     overflow: auto;
     display: inline-block;
-    
+    // display: flex;
+    // flex-flow: row wrap;
+    // // flex-wrap: nowrap;
+    // float: right;
 }
 
 // I could not horizontally align the cards

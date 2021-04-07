@@ -18,11 +18,7 @@ export const PersonProfile = () => {
 							<div key={item.uid} className="card">
 								<div className="card-horizontal">
 									<div className="img-square-wrapper mt-2">
-										<img
-											className=""
-											src="http://via.placeholder.com/400x300"
-											alt="Card image cap"
-										/>
+										<img className="" src="http://via.placeholder.com/300" alt="Card image cap" />
 									</div>
 									<div className="card-body">
 										<h4 className="card-title">{item.result.properties.name}</h4>
