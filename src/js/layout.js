@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
+import { PersonProfile } from "./views/PersonProfile";
+import { PlanetProfile } from "./views/PlanetProfile";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -10,6 +12,9 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
+//include your index.scss file into the bundle
+import "../styles/index.scss";
+
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -17,7 +22,8 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column">
+		// <div className="d-flex flex-column">
+		<div className="container">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -27,6 +33,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
+						</Route>
+						<Route exact path="/personprofile/:id">
+							<PersonProfile />
+						</Route>
+						<Route exact path="/planetprofile/:id">
+							<PlanetProfile />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
