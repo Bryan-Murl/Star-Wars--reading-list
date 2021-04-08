@@ -20,8 +20,8 @@ const CardPlanet = props => {
 						<div className="d-flex justify-content-center">
 							<h5 className="card-title">{props.name}</h5>
 						</div>
-						<div className="d-flex flex-column p-0">
-							<p className="p-0">
+						<div className="d-flex flex-column p-1">
+							<p className="p-1">
 								Population: {props.population}
 								<br />
 								Terrain: {props.terrain}
