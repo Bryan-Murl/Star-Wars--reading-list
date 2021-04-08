@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				const data = await response.json();
 
-				const fullDataPlanet = data.results.map(async (item, index, myArry) => {
+				const fullDataPlanet = data.results.map(async (item, index, myArray) => {
 					let allPlanetData = await fetch(item.url, {
 						method: "GET",
 						headers: {
@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				const data = await response.json();
 
-				const fullDataCharacter = data.results.map(async (item, index, myArry) => {
+				const fullDataCharacter = data.results.map(async (item, index, myArray) => {
 					let allCharacterData = await fetch(item.url, {
 						method: "GET",
 						headers: {
